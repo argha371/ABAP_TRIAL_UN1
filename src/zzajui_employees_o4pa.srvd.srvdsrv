@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZZAJC_EMPLOYEESPA'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZZAJC_EMPLOYEESPA'
+  }
+}
+define service ZZAJUI_EMPLOYEES_O4PA provider contracts odata_v4_ui {
+  expose ZZAJC_EMPLOYEESPA as Employees;
+}

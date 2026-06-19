@@ -1,0 +1,34 @@
+managed implementation in class ZZAJBP_R_EMPLOYEESPA unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZZAJR_EMPLOYEESPA alias Employees
+extensible
+draft table ZZAJR_EMPLOYEES_DPA
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   UUID,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   UUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+}

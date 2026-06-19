@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZZAJC_EMPLOYEESPA'
+@MappingRole: true
+define role ZZAJC_EMPLOYEESPA {
+  grant select on ZZAJC_EMPLOYEESPA
+  where INHERITING CONDITIONS FROM ENTITY ZZAJR_EMPLOYEESPA REPLACING { ROOT WITH _BaseEntity };
+}

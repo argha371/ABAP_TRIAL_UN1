@@ -1,0 +1,6 @@
+@EndUserText.label: 'Travel Service'
+define service Zsrv_ad_travel_m {
+  expose zc_ad_travel_m;
+  expose zc_ad_booking_m;
+  expose ZC_AD_BOOKSUPL_M;
+}
